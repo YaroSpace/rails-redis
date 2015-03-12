@@ -1,0 +1,10 @@
+<p>Team: <%= link_to @team.name, team_path(@team)  %> </p>
+<p>Team description: <%= @team.description  %></p>
+<br>
+<% @team.channels.each do |channel|  %>
+  <p>Channel: <%= link_to channel.name, channel_path(channel)  %> </p>
+  <p>Username: <%= channel.user.name  %></p>
+  <p>Game: <%= channel.game.name  %></p>
+  <p><b>Watchers: </b><%= @channel_watchers[channel.id]  %></p/>
+<% end  %>
+<hr>

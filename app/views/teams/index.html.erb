@@ -1,0 +1,6 @@
+<% @teams.each do |team|  %>
+  <p>Team: <%= link_to team.name, team_path(team)  %> </p>
+  <p>Team description: <%= team.description  %></p>
+  <p><b>Watchers: </b><%= @team_watchers[team.id]  %></p/>
+  <hr>
+<% end  %>

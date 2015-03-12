@@ -1,0 +1,5 @@
+<% @games.each do |game|  %>
+  <p>Game: <%= link_to game.name, game_path(game)  %> </p>
+  <p><b>Watchers: </b><%= @game_watchers[game.id]  %></p/>
+  <hr>
+<% end  %>
